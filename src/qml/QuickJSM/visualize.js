@@ -1,4 +1,9 @@
+/*javascript-state-machine@3.1.0.*/
+var visualize;
+
 (function webpackUniversalModuleDefinition(root, factory) {
+    visualize = factory();
+    /*
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
@@ -7,6 +12,7 @@
 		exports["StateMachineVisualize"] = factory();
 	else
 		root["StateMachineVisualize"] = factory();
+    */
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache

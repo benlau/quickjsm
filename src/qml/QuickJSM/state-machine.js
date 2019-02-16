@@ -1,4 +1,8 @@
+/*javascript-state-machine@3.1.0.*/
+var StateMachine;
 (function webpackUniversalModuleDefinition(root, factory) {
+    StateMachine = factory();
+    /*
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
@@ -7,6 +11,7 @@
 		exports["StateMachine"] = factory();
 	else
 		root["StateMachine"] = factory();
+    */
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -634,7 +639,7 @@ function build(target, config) {
 
 StateMachine.version  = '3.0.1';
 StateMachine.factory  = factory;
-StateMachine.apply    = apply;
+//StateMachine.apply    = apply; //QML: TypeError: Cannot assign to read-only property "apply"
 StateMachine.defaults = {
   wildcard: '*',
   init: {
