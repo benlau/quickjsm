@@ -45,5 +45,29 @@ Item {
             });
             console.log(QuickJSM.visualize(fsm));
         }
+
+        function test_StateMachineHistory() {
+            var options = {
+              init: 'open',
+              transitions: [
+                { name: 'close', from: 'open',   to: 'closed' },
+                { name: 'open',  from: 'closed', to: 'open'   }
+              ],
+              plugins: [
+                new QuickJSM.StateMachineHistory()
+              ]
+            }
+            var fsm = new QuickJSM.StateMachine(options);
+
+            fsm.close();
+            compare(fsm.history, ["open", 'closed']);
+
+            fsm.open();
+            compare(fsm.history, ["open", 'closed', 'open']);
+
+            fsm.historyBack();
+            compare(fsm.history, ["open", 'closed']);
+
+        }
     }
 }
