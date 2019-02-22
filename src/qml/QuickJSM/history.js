@@ -1,4 +1,8 @@
+var StateMachineHistory;
 (function webpackUniversalModuleDefinition(root, factory) {
+    StateMachineHistory = factory();
+
+    /*
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
@@ -7,6 +11,7 @@
 		exports["StateMachineHistory"] = factory();
 	else
 		root["StateMachineHistory"] = factory();
+   */
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
